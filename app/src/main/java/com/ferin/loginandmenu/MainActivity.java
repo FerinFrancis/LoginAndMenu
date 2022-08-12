@@ -56,13 +56,11 @@ public class MainActivity extends AppCompatActivity {
                 // And then it verifies if checkbox is in checked state
                 if(agreeCheck.isChecked()){
 
-                    // If it is in checked state, proceeds to checks if name is empty or not
-                    if (TextUtils.isEmpty(name))
+                    // If it is in checked state, proceeds to checks if any field is empty or not
+                    if (TextUtils.isEmpty(name)||TextUtils.isEmpty(mobile)||TextUtils.isEmpty(location)||TextUtils.isEmpty(email))
                     {
-                        // If name is empty, this toast message is shown
-                        Toast.makeText(MainActivity.this,
-                                "Empty field not allowed!",
-                                Toast.LENGTH_SHORT).show();
+                        // If any one field is empty, this toast message is shown
+                        Toast.makeText(MainActivity.this, "Empty field not allowed!", Toast.LENGTH_SHORT).show();
                     }
                     else
                     {
@@ -87,9 +85,19 @@ public class MainActivity extends AppCompatActivity {
                 mobile = mobileEdit.getText().toString();
                 location = locationEdit.getText().toString();
                 email = emailEdit.getText().toString();
-                if(agreeCheck.isChecked()){
-                    data = "Name: "+name+" \nMobile: "+mobile+" \nLocation: "+location+" \nEmail: "+email;
-                    displayView.setText(data);
+                if(agreeCheck.isChecked()) {
+
+                    // If it is in checked state, proceeds to checks if any field is empty or not
+                    if (TextUtils.isEmpty(name) || TextUtils.isEmpty(mobile) || TextUtils.isEmpty(location) || TextUtils.isEmpty(email))
+                    {
+                        // If any one field is empty, this toast message is shown
+                        Toast.makeText(MainActivity.this, "Empty field not allowed!", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+                    {
+                        data = "Name: "+name+" \nMobile: "+mobile+" \nLocation: "+location+" \nEmail: "+email;
+                        displayView.setText(data);
+                    }
                 }
                 else
                 {
