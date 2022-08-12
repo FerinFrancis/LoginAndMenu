@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/welcome" />
+
+    <EditText
+        android:id="@+id/nameEnterEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/welcomeeditbg"
+        android:padding="14dp"
+        android:inputType="textPersonName"
+        android:hint="Name" />
+
+    <EditText
+        android:id="@+id/mobileEnterEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/welcomeeditbg"
+        android:layout_marginTop="15dp"
+        android:padding="14dp"
+        android:hint="Mobile"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/locationEnterEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/welcomeeditbg"
+        android:layout_marginTop="15dp"
+        android:padding="14dp"
+        android:inputType="textPersonName"
+        android:hint="Location" />
+
+    <EditText
+        android:id="@+id/emailEnterEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/welcomeeditbg"
+        android:layout_marginTop="15dp"
+        android:padding="14dp"
+        android:inputType="textEmailAddress"
+        android:hint="Email" />
+
+    <CheckBox
+        android:id="@+id/agreeCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:text="Agree"
+        android:focusable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/toastButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:text="Toast" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/textViewButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goToNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textAllCaps="false"
+        android:text="Go To Next" />
+
+    <TextView
+        android:id="@+id/displayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:hint="Will Display Here" />
+
+</LinearLayout>
