@@ -50,8 +50,6 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void Back(MenuItem item) {
-//        Intent backIntent = new Intent(MainActivity2.this,MainActivity.class);
-//        startActivity(backIntent);
         finish();
     }
 
@@ -62,7 +60,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void Exit(MenuItem item) {
         // This closes the app completely, all activities
-        MainActivity2.this.finishAffinity();
+        finishAffinity();
     }
 
     public void AlertBox(MenuItem item) {
@@ -83,7 +81,8 @@ public class MainActivity2 extends AppCompatActivity {
         alertBox.show();
     }
 
-    public void displayImage(View view) {
+    // This is the method for button in custom_dialogbox.xml
+    public void customDialogGoogleButton(View view) {
         Intent intentNew = new Intent(MainActivity2.this,ThankYouActivity.class);
         startActivity(intentNew);
     }

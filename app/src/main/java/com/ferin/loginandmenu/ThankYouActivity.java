@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class ThankYouActivity extends AppCompatActivity {
 
@@ -23,4 +24,5 @@ public class ThankYouActivity extends AppCompatActivity {
             }
         });
     }
+
 }
