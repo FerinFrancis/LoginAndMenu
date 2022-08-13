@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="Dialog" />
 
     </LinearLayout>
 
@@ -96,12 +96,14 @@
         android:textAllCaps="false"
         android:text="Go To Next" />
 
-    <TextView
-        android:id="@+id/displayTextView"
+
+    <Button
+        android:id="@+id/customDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="25dp"
-        android:hint="Will Display Here" />
+        android:layout_marginTop="15dp"
+        android:onClick="customDialog"
+        android:textAllCaps="false"
+        android:text="Custom Dialog Box" />
 
 </LinearLayout>

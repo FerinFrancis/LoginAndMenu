@@ -4,8 +4,16 @@
 
     <item android:title="Back"
         android:onClick="Back"/>
+
     <item android:title="About"
         android:onClick="About"/>
+
     <item android:title="Exit"
         android:onClick="Exit"/>
+
+    <item android:title="AlertBox"
+        android:onClick="AlertBox"/>
+
+    <item android:title="WebView"
+        android:onClick="WebViewMethod"/>
 </menu>

@@ -1,7 +1,10 @@
 package com.ferin.loginandmenu;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -23,9 +26,11 @@ public class MainActivity extends AppCompatActivity {
     EditText nameEdit, mobileEdit,locationEdit,emailEdit;
     CheckBox agreeCheck;
     Button toastButtonVar,textViewButton, goNextButton;
-    TextView displayView;
     String name, mobile,location,email,data;
 
+
+    // object for class syntax
+    // example for class
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         toastButtonVar = findViewById(R.id.toastButton);
         textViewButton = findViewById(R.id.textViewButton);
         goNextButton = findViewById(R.id.goToNext);
-        displayView = findViewById(R.id.displayTextView);
 
 
         toastButtonVar.setOnClickListener(new View.OnClickListener() {
@@ -95,8 +99,21 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else
                     {
-                        data = "Name: "+name+" \nMobile: "+mobile+" \nLocation: "+location+" \nEmail: "+email;
-                        displayView.setText(data);
+//                        data = "Name: "+name+" \nMobile: "+mobile+" \nLocation: "+location+" \nEmail: "+email;
+//                        displayView.setText(data);
+
+
+                        // Create a Object for "AlertDialog.Builder" class
+                        AlertDialog.Builder data = new AlertDialog.Builder(MainActivity.this); // Context means currentclass.this
+                        // set the title which has to be displayed in alert dialog box, will work even if setTitle is not added
+                        data.setTitle("Text");
+                        // set the message which has to be displayed
+                        data.setMessage("Name: "+name+" \nMobile: "+mobile+" \nLocation: "+location+" \nEmail: "+email);
+                        data.setIcon(android.R.drawable.star_big_on);  // By default icon is set next to Title
+                        data.setPositiveButton("Right",null); // set text to right side of dialog box
+                        data.setNegativeButton("Center",null); // set text to center of dialog box
+                        data.setNeutralButton("Left",null); // set text to left side of dialog box
+                        data.show();
                     }
                 }
                 else
@@ -109,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
         goNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 // When button is clicked, it stores the data from all editTexts to respective variable
                 name = nameEdit.getText().toString();
                 mobile = mobileEdit.getText().toString();
@@ -118,12 +136,29 @@ public class MainActivity extends AppCompatActivity {
                 // And then it verifies if checkbox is in checked state
                 if(agreeCheck.isChecked()){
                     // If it is in checked state, creates an intent between this MainActivity and MainActivity2
-                    Intent intent = new Intent(MainActivity.this,MainActivity2.class);
-                    intent.putExtra("Name",name);
-                    intent.putExtra("Mobile",mobile);
-                    intent.putExtra("Location",location);
-                    intent.putExtra("Email",email);
-                    startActivity(intent);
+                    if(TextUtils.isEmpty(name)||TextUtils.isEmpty(mobile)||TextUtils.isEmpty(location)||TextUtils.isEmpty(email))
+                    {
+                        Toast.makeText(MainActivity.this, "Empty field not allowed!", Toast.LENGTH_SHORT).show();
+
+                    }
+                    else
+                    {
+                        AlertDialog.Builder goToDialog = new AlertDialog.Builder(MainActivity.this);
+                        goToDialog.setTitle("Next Activity");
+                        goToDialog.setMessage("Do you want to proceed to next activity");
+                        goToDialog.setPositiveButton("No",null);
+                        goToDialog.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+                                intent.putExtra("Name",name);
+                                intent.putExtra("Mobile",mobile);
+                                intent.putExtra("Location",location);
+                                intent.putExtra("Email",email);
+                                startActivity(intent);
+                            }
+                        }).show();
+                    }
                 }
                 else
                 {
@@ -147,5 +182,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void Settings(MenuItem item) {
         Toast.makeText(this, "Settings will be opened later!", Toast.LENGTH_SHORT).show();
+    }
+
+    // To create a customDialog
+    public void customDialog(View view) {
+        Dialog dia = new Dialog(MainActivity.this);
+        dia.setContentView(R.layout.activity_thank_you);
+        dia.show();
     }
 }
