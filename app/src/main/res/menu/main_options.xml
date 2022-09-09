@@ -6,4 +6,6 @@
         android:onClick="Welcome"/>
     <item android:title="Settings"
         android:onClick="Settings"/>
+    <item android:title="Custom Google Dialog"
+        android:onClick="CustomGoogleDialog"/>
 </menu>

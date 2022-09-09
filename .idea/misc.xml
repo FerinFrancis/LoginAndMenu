@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ferin/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/drawable/welcomeeditbg.xml" value="0.2595" />
         <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/layout/activity_main2.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/layout/activity_thank_you.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/layout/activity_web_view.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/layout/custom_dialogbox.xml" value="0.253125" />
+        <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/layout/item_list.xml" value="0.253125" />
         <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/layout/main_custom_dialog.xml" value="0.253125" />
+        <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/layout/video_button_layout.xml" value="0.253125" />
+        <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/layout/video_layout.xml" value="0.253125" />
         <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/menu/main_options.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ferin/StudioProjects/LoginAndMenu/app/src/main/res/menu/options.xml" value="0.25416666666666665" />
       </map>
